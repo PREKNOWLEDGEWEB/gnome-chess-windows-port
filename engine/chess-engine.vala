@@ -169,10 +169,6 @@ public abstract class ChessEngine : Object
         if (FileUtils.close (stderr_fd) == -1)
             warning ("Failed to close pipe to engine's stderr: %s", strerror (errno));
         stderr_fd = -1;
-
-        if (kill_engine && Posix.kill (pid, Posix.Signal.TERM) == -1)
-            warning ("Failed to kill engine: %s", strerror (errno));
-        pid = 0;
     }
 
     private bool read_cb (IOChannel source, IOCondition condition)

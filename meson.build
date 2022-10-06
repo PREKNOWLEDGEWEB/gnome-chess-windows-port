@@ -29,7 +29,7 @@ bindir = join_paths(get_option('prefix'), get_option('bindir'))
 # Dependencies
 min_glib_version = '2.44.0'
 
-gio = dependency('gio-unix-2.0', version: '>=' + min_glib_version)
+gio = dependency('gio-windows-2.0', version: '>=' + min_glib_version)
 glib = dependency('glib-2.0', version: '>=' + min_glib_version)
 gmodule = dependency('gmodule-2.0', version: '>=' + min_glib_version)
 gtk = dependency('gtk4')
